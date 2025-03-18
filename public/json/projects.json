@@ -1,0 +1,42 @@
+[
+  {
+    "project_title": "Pro Code Programming",
+    "image": "/images/projects/pro_code_programming.webp",
+    "github_url": "",
+    "live_or_demo_url": "https://procodeprogramming.com",
+    "project_category": "Web Development",
+    "project_overview": "Pro Code Programming is an educational platform designed to help learners and developers enhance their skills with interactive resources and tools."
+  },
+  {
+    "image": "/images/projects/paithani_and_silk_saree.webp",
+    "project_title": "Paithani And Silk Sarees",
+    "live_or_demo_url": "https://paithaniandsilksaree.com/",
+    "github_url": "",
+    "project_category": "Web Development",
+    "project_overview": "Paithani And Silk Saree is an eCommerce platform dedicated to selling traditional Paithani and silk sarees from Maharashtra. Built with Angular, Node.js, and MongoDB, it features a fully custom admin panel for managing products, orders, and sales. The website offers a seamless and secure shopping experience for customers while providing complete control for administrators."
+  },
+  {
+    "project_title": "ROC Care Systems",
+    "image": "/images/projects/roc_care_systems.webp",
+    "live_or_demo_url": "https://roccaresystems.com/",
+    "github_url": "",
+    "project_category": "Web Development",
+    "project_overview": "The ROC App is a web-based program that provides a structured and proven method for care staff to follow in order to prevent avoidable dehydration."
+  },
+  {
+    "project_title": "Before The Move",
+    "image": "/images/projects/before-the-move-project.webp",
+    "live_or_demo_url": "",
+    "github_url": "",
+    "project_category": "Web Development",
+    "project_overview": "Before The Move is a platform helping users who are relocating by providing a structured checklist and connecting them with local businesses to address all their needs during the move."
+  },
+  {
+    "project_title": "Talkwee",
+    "image": "/images/projects/talkwee-1.webp",
+    "live_or_demo_url": "",
+    "github_url": "",
+    "project_category": "Web Development",
+    "project_overview": "Talkwee is a dating platform that allows users to manage their social profiles, share feeds, and engage with others through audio and video calls. The platform includes features like Agora API integration, purchase minutes facility, and payment gateway integrations like Stripe and PayPal."
+  }
+]
