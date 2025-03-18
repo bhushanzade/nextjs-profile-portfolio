@@ -1,0 +1,26 @@
+[
+  {
+    "degree": "Bachelor's degree",
+    "program": "Computer Engineering",
+    "institution": "BSIOTR JSPM",
+    "location": "Pune, India",
+    "date": "Sept 2014 - June 2018",
+    "grade": "61 out of 100"
+  },
+  {
+    "degree": "Diploma",
+    "program": "Computer Engineering",
+    "institution": "Vidya Institute of Technology",
+    "location": "Yeola, India",
+    "date": "Sept 2011 - June 2024",
+    "grade": "60 out of 100"
+  },
+  {
+    "degree": "SSC",
+    "program": "10th",
+    "institution": "Swami Muktanand Vidyalaya",
+    "location": "Yeola, India",
+    "date": "Sept 2010 - June 2011",
+    "grade": "68 out of 100"
+  }
+]
