@@ -4,6 +4,7 @@ import path from "path";
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
+  target: "serverless",
   output: isProd ? "export" : "standalone",
   webpack: (config) => {
     config.resolve.alias = {
