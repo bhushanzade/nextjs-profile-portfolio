@@ -4,7 +4,7 @@ import { TEducation } from '@type/Eduction';
 import { TProject } from '@type/Project';
 import axios from 'axios';
 
-export const BASE_URL = `/json`;
+export const BASE_URL = `${process.env.BASE_URL}/json`;
 
 export async function getAllProjects(): Promise<TProject[]> {
   try {
