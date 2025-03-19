@@ -1,8 +1,8 @@
-import BiographySection from "@components/about/BiographySection";
-import CertificationSection from "@components/about/CertificationSection";
-import EducationSection from "@components/about/EducationSection";
-import ExperienceSection from "@components/about/ExperienceSection";
-import SkillSection from "@components/about/SkillSection";
+import BiographySection from "@components/About/BiographySection";
+import CertificationSection from "@components/About/CertificationSection";
+import EducationSection from "@components/About/EducationSection";
+import ExperienceSection from "@components/About/ExperienceSection";
+import SkillSection from "@components/About/SkillSection";
 
 export default function AboutPage() {
   return (
