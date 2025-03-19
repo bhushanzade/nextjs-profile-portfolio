@@ -22,28 +22,28 @@
         "name": "next"
       }
     ],
-    "baseUrl": "./",
+    "baseUrl": "src/",
     "paths": {
       "@components/*": [
-        "src/components/*"
+        "components/*"
       ],
       "@utils/*": [
-        "src/utils/*"
+        "utils/*"
       ],
       "@pages/*": [
-        "src/pages/*"
+        "pages/*"
       ],
       "@ui-kit/*": [
-        "src/ui-kits/*"
+        "ui-kits/*"
       ],
       "@type/*": [
-        "src/types/*"
+        "types/*"
       ],
       "@models/*": [
-        "src/models/*"
+        "models/*"
       ],
       "@lib/*": [
-        "src/lib/*"
+        "lib/*"
       ],
     }
   },
