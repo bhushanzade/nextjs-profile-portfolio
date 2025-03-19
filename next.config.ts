@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
-  output: process.env.NODE_ENV === "production" ? "export" : "standalone",
+  // output: process.env.NODE_ENV === "production" ? "export" : "standalone",
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
