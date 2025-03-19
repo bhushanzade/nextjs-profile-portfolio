@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-/* eslint-disable react/no-unescaped-entities */
 const RecentWorkSection = () => {
   return (
     <section className="container mx-auto">

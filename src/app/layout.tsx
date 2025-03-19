@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@components/navbar";
@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
 const title = "Open Source Next.js Profile Portfolio - Reusable and Customizable";
 const description =
   "A fully-featured, open-source profile portfolio built with Next.js. Download, customize, and deploy your own profile portfolio with ease. Perfect for developers, engineers, and tech enthusiasts.";
+
+export const viewport: Viewport = {
+  themeColor: "#000000", // Color of the browser toolbar, used in mobile apps and browsers
+  width: "device-width, initial-scale=1.0",
+}
 
 export const metadata: Metadata = {
   title: title,
@@ -58,9 +63,8 @@ export const metadata: Metadata = {
     index: true, // Allows search engines to index the page
     follow: true, // Allows search engines to follow links on the page
   },
-  themeColor: "#000000", // Color of the browser toolbar, used in mobile apps and browsers
+
   applicationName: "Portfolio using Next Js", // Name of your application
-  viewport: "width=device-width, initial-scale=1", // Ensures proper scaling on mobile devices,
   creator: "Bhushan Zade", // Name of the creator of the website
   publisher: "Bhushan Zade", // Name of the publisher of the website
   "authors": [{
