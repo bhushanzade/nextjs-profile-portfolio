@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 import path from "path";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  // output: process.env.NODE_ENV === "production" ? "export" : "standalone",
+  output: isProd ? "export" : "standalone",
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -17,6 +19,7 @@ const nextConfig: NextConfig = {
     return config;
   },
   images: {
+    unoptimized: isProd ? true : false,
     remotePatterns: [
       {
         protocol: 'https',
