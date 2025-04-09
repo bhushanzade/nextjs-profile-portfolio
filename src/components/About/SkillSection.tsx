@@ -70,7 +70,7 @@ const SkillSection = () => {
       <h2 className="text-4xl font-semibold text-center mb-12 text-slate-200">My Skills</h2>
 
       {/* Filter Buttons */}
-      <div className="flex justify-center gap-2 mb-16">
+      <div className="flex flex-wrap justify-center gap-2 mb-16">
         <button
           className={`bg-slate-600 w-[150px] relative rounded-xl ${activeCategory === 'all' ? '!bg-slate-200 text-black text-semibold active' : ''}`}
           onClick={() => handleCategoryChange('all')}

@@ -8,10 +8,10 @@ export default async function WorkExperiencePage() {
 
   return (
     <>
-      <section className="relative px-20 py-20 overflow-hidden">
+      <section className="relative p-5 md:p-20 overflow-hidden">
         <WorkLandingSection workExperiences={WorkExperiences} />
       </section>
-      <section className="relative px-20 py-20 overflow-hidden">
+      <section className="relative p-5 md:p-20 overflow-hidden">
         <ExperienceDetails workExperiences={WorkExperiences} />
       </section>
     </>

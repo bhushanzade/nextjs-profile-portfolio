@@ -7,10 +7,10 @@ import SkillSection from "@components/About/SkillSection";
 export default function AboutPage() {
   return (
     <>
-      <section className="relative px-20 py-20 overflow-hidden">
+      <section className="relative p-5 md:p-20 overflow-hidden">
         <BiographySection />
       </section>
-      <section className="px-20 py-20 relative overflow-hidden">
+      <section className="p-5 md:p-20 relative overflow-hidden">
         <SkillSection />
       </section>
       <section className="relative overflow-hidden">

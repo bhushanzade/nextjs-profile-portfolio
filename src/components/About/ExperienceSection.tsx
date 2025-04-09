@@ -6,13 +6,13 @@ const ExperienceSection = async () => {
   const WorkExperiences = await getWorkExperiences();
 
   return (
-    <div className="mx-auto px-20 py-20 overflow-hidden">
+    <div className="mx-auto p-5 md:p-20 overflow-hidden">
       <div className="container">
         <div className="grid gap-4 mx-4 sm:grid-cols-12">
           <div className="col-span-12 sm:col-span-4">
             <div className="flex flex-col align-middle justify-center h-full text-start sm:text-left before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-violet-400">
-              <h3 className="text-3xl font-semibold">My Experience</h3>
-              <span className="text-sm tracking-wider text-violet-400">5+ Years Senior Software Engineer</span>
+              <h3 className="text-3xl font-semibold text-center md:text-left">My Experience</h3>
+              <span className="text-sm tracking-wider text-violet-400 text-center md:text-left">5+ Years Senior Software Engineer</span>
               <div className="mt-4">
                 <Image width={300} height={300} alt="Working Man" src="/images/man-working-on-laptop.svg"
                   className="mix-blend-lighten drop-shadow-lg"

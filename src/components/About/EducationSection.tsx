@@ -6,7 +6,7 @@ const EducationSection = async () => {
   const Educations = await getEducations();
 
   return (
-    <div className="mx-auto px-20 py-20 overflow-hidden">
+    <div className="mx-auto p-5 md:p-20 overflow-hidden">
       <div className="container">
         <div className="grid gap-10 mx-4 sm:grid-cols-12">
           <div className="relative col-span-12 px-4 space-y-6 sm:col-span-8">
@@ -27,10 +27,10 @@ const EducationSection = async () => {
             </div>
           </div>
           <div className="col-span-12 sm:col-span-4">
-            <div className="flex flex-col align-middle justify-center text-end h-full sm:text-right before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:me-0 before:bg-pink-400">
-              <h3 className="text-3xl font-semibold">My Education</h3>
-              <span className="text-sm tracking-wider text-pink-400">B.E. Computer Engineer</span>
-              <div className="flex justify-end w-full">
+            <div className="flex flex-col align-middle justify-center text-end h-full before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:me-0 before:bg-pink-400">
+              <h3 className="text-3xl font-semibold text-center md:text-right">My Education</h3>
+              <span className="text-sm tracking-wider text-pink-400 text-center md:text-right">B.E. Computer Engineer</span>
+              <div className="flex md:justify-end w-full">
                 <div className="mt-4 w-[80%]">
                   <Image width={300} height={300} alt="Working Man" src="/images/learning-concept -2.png"
                     className="drop-shadow-lg w-full h-full object-cover"

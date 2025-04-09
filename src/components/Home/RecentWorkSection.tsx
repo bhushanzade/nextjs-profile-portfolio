@@ -8,7 +8,12 @@ const RecentWorkSection = () => {
   return (
     <section className="container mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 my-4">
-        <div className="col-span-5 mt-4 lg:mt-0">
+        <div className="col-span-5 place-self-center text-center mt-4 lg:mt-0">
+          <div className="mb-5 md:hidden">
+            <span className="text-transparent font-extrabold text-5xl bg-clip-text bg-gradient-to-r from-orange-400 via-slate-200 to-orange-200">
+              Recent Experience
+            </span>
+          </div>
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -29,7 +34,7 @@ const RecentWorkSection = () => {
             transition={{ duration: 0.5 }}
             className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
           >
-            <div className="mb-5">
+            <div className="mb-5 hidden md:block">
               <span className="text-transparent font-extrabold text-5xl bg-clip-text bg-gradient-to-r from-orange-400 via-slate-200 to-orange-200">
                 Recent Experience
               </span>

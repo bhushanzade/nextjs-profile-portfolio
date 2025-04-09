@@ -45,7 +45,7 @@ const Navbar = (): JSX.Element => {
   return (
     <div
       className={` mx-auto w-full `}>
-      <nav className="block md:flex justify-between items-center p-2 px-20">
+      <nav className="block md:flex justify-between items-center p-2 px-5 md:px-20">
         <div className="flex justify-between">
           <div className='flex items-center gap-4'>
             <Link href="/" className="flex items-center justify-center rounded-full w-16 h-16  bg-dark text-white dark:border-2 dark:border-solid dark:border-light text-2xl font-bold">
