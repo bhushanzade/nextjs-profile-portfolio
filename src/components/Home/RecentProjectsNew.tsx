@@ -150,14 +150,14 @@ const RecentProjectsNew = () => {
                             </motion.button>
                         ))}
 
-                        <div className="mt-auto pt-6">
+                        {/* <div className="mt-auto pt-6">
                             <Link href="/projects" passHref>
                                 <NeonButton className="w-full justify-center group flex items-center">
                                     <span className="mr-2 group-hover:animate-pulse">View All Missions</span>
                                     <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
                                 </NeonButton>
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Active Mission Details / Holographic View */}

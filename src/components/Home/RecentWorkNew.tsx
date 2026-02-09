@@ -225,13 +225,13 @@ const RecentWorkNew = () => {
                 </div>
 
                 {/* Footer Action */}
-                <div className="mt-16 text-center">
+                {/* <div className="mt-16 text-center">
                     <Link href="/work" passHref>
                         <NeonButton className="px-12">
                             Initialize Full Protocol &rarr;
                         </NeonButton>
                     </Link>
-                </div>
+                </div> */}
             </div>
         </section>
     );
