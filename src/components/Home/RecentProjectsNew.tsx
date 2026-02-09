@@ -120,8 +120,8 @@ const RecentProjectsNew = () => {
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ delay: idx * 0.1 }}
                                 className={`relative p-5 text-left transition-all duration-300 rounded-xl border group overflow-hidden ${activeProject === project.id
-                                        ? "bg-neon-cyan/10 border-neon-cyan shadow-[0_0_20px_rgba(0,243,255,0.2)]"
-                                        : "bg-white/5 border-white/10 hover:border-white/30 hover:bg-white/10"
+                                    ? "bg-neon-cyan/10 border-neon-cyan shadow-[0_0_20px_rgba(0,243,255,0.2)]"
+                                    : "bg-white/5 border-white/10 hover:border-white/30 hover:bg-white/10"
                                     }`}
                             >
                                 <div className="flex justify-between items-start mb-2 relative z-10">
@@ -129,8 +129,8 @@ const RecentProjectsNew = () => {
                                         {project.codename}
                                     </h3>
                                     <span className={`text-[9px] px-2 py-0.5 rounded border tracking-wider font-mono ${project.status === "CLASSIFIED" ? "border-red-500 text-red-400 bg-red-500/10" :
-                                            project.status === "ACTIVE" ? "border-green-500 text-green-400 bg-green-500/10" :
-                                                "border-neon-purple text-neon-purple bg-neon-purple/10"
+                                        project.status === "ACTIVE" ? "border-green-500 text-green-400 bg-green-500/10" :
+                                            "border-neon-purple text-neon-purple bg-neon-purple/10"
                                         }`}>
                                         {project.status}
                                     </span>
@@ -231,9 +231,28 @@ const RecentProjectsNew = () => {
                                         </div>
                                     </div>
 
-                                    {/* Decorative Spinning Elements */}
-                                    <div className="absolute -bottom-24 -right-24 w-80 h-80 border border-neon-cyan/10 rounded-full animate-spin-slow pointer-events-none" />
-                                    <div className="absolute -bottom-24 -right-24 w-60 h-60 border border-t-2 border-r-2 border-neon-purple/20 rounded-full animate-spin-reverse-slow pointer-events-none" />
+                                    {/* Decorative Spinning Elements - "Blueprint Scanner" Aesthetic */}
+                                    <div className="absolute -bottom-24 -right-24 w-96 h-96 pointer-events-none opacity-40">
+                                        {/* Outer Gear */}
+                                        <div className="absolute inset-0 border border-dashed border-neon-cyan/20 rounded-full animate-spin-slow" />
+
+                                        {/* Middle Circuit Ring */}
+                                        <div className="absolute inset-8 border border-dotted border-neon-purple/30 rounded-full animate-spin-reverse-slow" />
+
+                                        {/* Inner Loading Arc */}
+                                        <div className="absolute inset-16 border-t-2 border-l-2 border-neon-cyan/40 rounded-full animate-[spin_5s_linear_infinite]" />
+
+                                        {/* Core Scanner Pulse */}
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <div className="w-48 h-48 border border-white/5 rounded-full flex items-center justify-center">
+                                                <div className="w-2 h-2 bg-neon-cyan rounded-full animate-ping" />
+                                            </div>
+                                        </div>
+
+                                        {/* Scanning Reticle */}
+                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[1px] bg-gradient-to-r from-transparent via-neon-cyan/20 to-transparent animate-[spin_8s_linear_infinite]" />
+                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1px] h-[120%] bg-gradient-to-b from-transparent via-neon-purple/20 to-transparent animate-[spin_12s_linear_infinite_reverse]" />
+                                    </div>
                                 </GlassCard>
                             </motion.div>
                         </AnimatePresence>

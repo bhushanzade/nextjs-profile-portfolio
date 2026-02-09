@@ -33,6 +33,8 @@ export default {
         "glow-pulse": "glow-pulse 2s infinite alternate",
         "neon-flicker": "neon-flicker 1.5s infinite alternate",
         "scan-fast": "scan-fast 2s linear infinite",
+        "spin-slow": "spin 15s linear infinite",
+        "spin-reverse-slow": "spin-reverse 15s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -95,6 +97,10 @@ export default {
           "10%": { opacity: "1" },
           "90%": { opacity: "1" },
           "100%": { top: "100%", opacity: "0" },
+        },
+        "spin-reverse": {
+          "0%": { transform: "rotate(360deg)" },
+          "100%": { transform: "rotate(0deg)" },
         }
       }
     },
