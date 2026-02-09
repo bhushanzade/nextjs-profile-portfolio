@@ -45,5 +45,8 @@
     "three": "^0.174.0",
     "typescript": "^5",
     "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
