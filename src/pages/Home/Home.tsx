@@ -1,29 +1,19 @@
-import RecentWorkSection from "@components/Home/RecentWorkSection";
-import HomeHeroSection from "@components/Home/HomeHeroSection";
-import RecentProjectSection from "@components/Home/RecentProjectSection";
+import React from "react";
+import HomeHeroNew from "@components/Home/HomeHeroNew";
+import RecentWorkNew from "@components/Home/RecentWorkNew";
+import RecentProjectsNew from "@components/Home/RecentProjectsNew";
+import { AnimatedBackground } from "@components/ui/AnimatedBackground";
 
 export default function HomePage() {
   return (
-    <div className="relative bg-hero-pattern">
-      <div className="z-50">
-        <section className="p-5 md:p-20">
-          <div className="container mx-auto">
-            <HomeHeroSection />
-          </div>
-        </section>
+    <div className="relative min-h-screen overflow-hidden bg-deep-bg text-white selection:bg-neon-cyan selection:text-black">
+      <AnimatedBackground />
 
-        <section className="p-5 md:p-20">
-          <div className="container mx-auto">
-            <RecentWorkSection />
-          </div>
-        </section>
-
-        <section className="p-5 md:p-20">
-          <div className="container mx-auto">
-            <RecentProjectSection />
-          </div>
-        </section>
-      </div>
+      <main className="relative z-10 flex flex-col gap-20 pb-20">
+        <HomeHeroNew />
+        <RecentWorkNew />
+        <RecentProjectsNew />
+      </main>
     </div>
   );
 }

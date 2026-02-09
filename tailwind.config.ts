@@ -14,14 +14,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#1F2937", // dark primary color for text
-        secondary: "#3B82F6", // blue primary color
-        accent: "#9CA3AF", // gray accent color
-        highlight: "#F59E0B", // yellow accent color
+        primary: "#1F2937",
+        secondary: "#3B82F6",
+        accent: "#9CA3AF",
+        highlight: "#F59E0B",
+        "neon-cyan": "#00f3ff",
+        "neon-purple": "#bc13fe",
+        "deep-bg": "#050505",
       },
-      // backgroundImage: {
-      //   "hero-pattern": "url('/images/herobg.png')",
-      // },
       animation: {
         changewidth: 'width 2s ease-in-out infinite',
         spin: 'spin 15s linear infinite',
@@ -30,6 +30,8 @@ export default {
         animatepingslow: 'ping 5s cubic-bezier(0, 0, 0.2, 1) infinite',
         fadeIn: "fadeIn 1s ease-out",
         slideUp: "slideUp 1s ease-out",
+        "glow-pulse": "glow-pulse 2s infinite alternate",
+        "neon-flicker": "neon-flicker 1.5s infinite alternate",
       },
       keyframes: {
         fadeIn: {
@@ -66,40 +68,26 @@ export default {
             opacity: '0'
           }
         },
+        "glow-pulse": {
+          "0%": { boxShadow: "0 0 5px #00f3ff, 0 0 10px #00f3ff" },
+          "100%": { boxShadow: "0 0 20px #00f3ff, 0 0 40px #00f3ff" },
+        },
+        "neon-flicker": {
+          "0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%": { opacity: "1" },
+          "20%, 24%, 55%": { opacity: "0.5" },
+        },
         wiggle: {
-          '0%': {
-            transform: 'skewX(9deg)'
-          },
-          '10%': {
-            transform: 'skewX(-8deg)',
-          },
-          '20%': {
-            transform: 'skewX(7deg)',
-          },
-          '30%': {
-            transform: 'skewX(-6deg)',
-          },
-          '40%': {
-            transform: 'skewX(5deg)'
-          },
-          '50%': {
-            transform: 'skewX(-4deg)',
-          },
-          '60%': {
-            transform: 'skewX(3deg)'
-          },
-          '70%': {
-            transform: 'skewX(-2deg)'
-          },
-          '80%': {
-            transform: 'skewX(1deg)'
-          },
-          '90%': {
-            transform: 'skewX(0deg)'
-          },
-          '100%': {
-            transform: 'skewX(0deg)'
-          }
+          '0%': { transform: 'skewX(9deg)' },
+          '10%': { transform: 'skewX(-8deg)' },
+          '20%': { transform: 'skewX(7deg)' },
+          '30%': { transform: 'skewX(-6deg)' },
+          '40%': { transform: 'skewX(5deg)' },
+          '50%': { transform: 'skewX(-4deg)' },
+          '60%': { transform: 'skewX(3deg)' },
+          '70%': { transform: 'skewX(-2deg)' },
+          '80%': { transform: 'skewX(1deg)' },
+          '90%': { transform: 'skewX(0deg)' },
+          '100%': { transform: 'skewX(0deg)' }
         }
       }
     },

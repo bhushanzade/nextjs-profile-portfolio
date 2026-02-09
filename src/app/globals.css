@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: linear-gradient(-45deg, #020617, #050e24, #041c32, #020617);
+  --background: #050505;
+  --foreground: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: linear-gradient(-45deg, #020617, #232946, #041c32, #020617);
+    --background: #050505;
     --foreground: #ededed;
   }
 }
@@ -15,19 +15,19 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  background-size: 400% 400%;
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-animation: gradient 10s ease infinite;
-  animation: gradient 10s ease infinite;
+  overflow-x: hidden;
 }
 
 @-webkit-keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -37,29 +37,27 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 .hsjad65h {
-  background: linear-gradient(
-    90deg,
-    var(--token-cf9eabfa-d313-4c94-941c-19c2f5bf1c6c, rgb(111, 141, 194)) 0%,
-    var(--token-ab4f91f1-8b85-4b37-a1f1-c1cc024c302e, rgb(33, 62, 108)) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--token-cf9eabfa-d313-4c94-941c-19c2f5bf1c6c, rgb(111, 141, 194)) 0%,
+      var(--token-ab4f91f1-8b85-4b37-a1f1-c1cc024c302e, rgb(33, 62, 108)) 100%);
   border-color: rgb(53, 69, 95);
 }
 
 .ucyr45v {
-  background: radial-gradient(
-    75% 63.6% at 50% 2.5%,
-    rgb(0, 50, 125) 0%,
-    rgba(99, 102, 241, 0) 100%
-  );
+  background: radial-gradient(75% 63.6% at 50% 2.5%,
+      rgb(0, 50, 125) 0%,
+      rgba(99, 102, 241, 0) 100%);
 }
 
 .mvusi45ff {
@@ -70,11 +68,9 @@ body {
 }
 
 .ovuisuf {
-  background: radial-gradient(
-    75% 63.6% at 50% 2.5%,
-    rgb(36, 115, 236) 0%,
-    rgba(99, 102, 241, 0) 100%
-  );
+  background: radial-gradient(75% 63.6% at 50% 2.5%,
+      rgb(36, 115, 236) 0%,
+      rgba(99, 102, 241, 0) 100%);
   opacity: 0.4;
   bottom: 0;
   flex: none;
@@ -92,12 +88,11 @@ body {
 .text-color-change-animation {
   font-family: arial black;
   font-size: 60px;
-  background-image: linear-gradient(
-    to right,
-    rgb(154, 203, 255),
-    rgb(255, 183, 214),
-    rgb(231, 231, 231)
-  );
+  background-image: linear-gradient(to right,
+      rgb(154, 203, 255),
+      rgb(255, 183, 214),
+      rgb(231, 231, 231));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: rainbow-animation 300s linear infinite;
