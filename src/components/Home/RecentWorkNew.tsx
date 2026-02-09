@@ -77,7 +77,7 @@ const RecentWorkNew = () => {
                     {/* The "Arc Reactor" / Central Hub Visual Details */}
                     <div className="order-2 lg:order-1 lg:sticky lg:top-32 relative w-full lg:w-1/3 flex justify-center perspective-1000">
                         {/* Holographic Projection Base */}
-                        <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
+                        <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center scale-75 md:scale-100">
                             {/* Core Glow */}
                             <div className="absolute inset-0 bg-neon-cyan/20 rounded-full blur-[50px] animate-pulse" />
 
@@ -135,7 +135,7 @@ const RecentWorkNew = () => {
 
                     {/* Content Panels / Data Stream */}
                     <div className="order-1 lg:order-2 w-full lg:w-2/3">
-                        <div className="relative border-l-2 border-white/10 ml-8 md:ml-0 pl-8 md:pl-0 md:border-l-0 space-y-12">
+                        <div className="relative border-l-2 border-white/10 ml-4 pl-6 md:ml-0 md:pl-0 md:border-l-0 space-y-8 md:space-y-12">
                             {experiences.map((exp, idx) => (
                                 <motion.div
                                     key={exp.id}
@@ -146,19 +146,19 @@ const RecentWorkNew = () => {
                                     className={`relative group cursor-pointer perspective-1000`}
                                 >
                                     {/* Timeline Connector for Mobile */}
-                                    <div className="absolute -left-[41px] top-8 w-5 h-5 bg-black border-2 border-neon-cyan rounded-full md:hidden z-10" />
+                                    <div className="absolute -left-[35px] top-6 w-5 h-5 bg-black border-2 border-neon-cyan rounded-full md:hidden z-10" />
 
-                                    <GlassCard className={`p-8 md:p-10 transition-all duration-500 transform-gpu ${activeExp === exp.id ? "border-neon-cyan/50 bg-white/5 shadow-[0_0_30px_rgba(0,243,255,0.1)] scale-[1.02]" : "border-white/5 hover:border-white/20 opacity-80"}`}>
+                                    <GlassCard className={`p-6 md:p-10 transition-all duration-500 transform-gpu ${activeExp === exp.id ? "border-neon-cyan/50 bg-white/5 shadow-[0_0_30px_rgba(0,243,255,0.1)] scale-[1.02]" : "border-white/5 hover:border-white/20 opacity-80"}`}>
 
                                         {/* Header */}
-                                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-2">
+                                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
                                             <div>
-                                                <h3 className={`text-2xl md:text-3xl font-bold ${activeExp === exp.id ? "text-white" : "text-gray-400"}`}>
+                                                <h3 className={`text-xl md:text-3xl font-bold ${activeExp === exp.id ? "text-white" : "text-gray-400"}`}>
                                                     {exp.company}
                                                 </h3>
-                                                <p className="text-neon-cyan font-mono text-sm tracking-wider mt-1">{exp.role} <span className="text-gray-500">| {exp.location}</span></p>
+                                                <p className="text-neon-cyan font-mono text-xs md:text-sm tracking-wider mt-1">{exp.role} <span className="text-gray-500 block sm:inline">| {exp.location}</span></p>
                                             </div>
-                                            <span className="text-xs font-mono text-neon-purple border border-neon-purple/30 px-3 py-1 rounded-full bg-neon-purple/10">
+                                            <span className="text-[10px] md:text-xs font-mono text-neon-purple border border-neon-purple/30 px-2 py-1 rounded-full bg-neon-purple/10 whitespace-nowrap">
                                                 {exp.period}
                                             </span>
                                         </div>
@@ -196,11 +196,11 @@ const RecentWorkNew = () => {
                                                     </div>
 
                                                     {/* Stats Grid - "HUD" Style */}
-                                                    <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
+                                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-white/10 pt-6">
                                                         {Object.entries(exp.stats).map(([label, value]) => (
                                                             <div key={label} className="text-center bg-black/30 p-2 rounded border border-white/5">
-                                                                <div className="text-lg md:text-xl font-bold text-white text-shadow-glow">{value}</div>
-                                                                <div className="text-[10px] uppercase text-gray-500 tracking-wider font-mono mt-1">{label}</div>
+                                                                <div className="text-base md:text-xl font-bold text-white text-shadow-glow">{value}</div>
+                                                                <div className="text-[9px] md:text-[10px] uppercase text-gray-500 tracking-wider font-mono mt-1">{label}</div>
                                                             </div>
                                                         ))}
                                                     </div>

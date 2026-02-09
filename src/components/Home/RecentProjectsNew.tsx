@@ -171,7 +171,7 @@ const RecentProjectsNew = () => {
                                 transition={{ duration: 0.4, ease: "circOut" }}
                                 className="h-full"
                             >
-                                <GlassCard className="h-full p-8 md:p-12 relative overflow-hidden flex flex-col border-neon-cyan/30 shadow-[0_0_50px_rgba(0,243,255,0.1)]" >
+                                <GlassCard className="h-full p-6 md:p-12 relative overflow-hidden flex flex-col border-neon-cyan/30 shadow-[0_0_50px_rgba(0,243,255,0.1)]" >
 
                                     {/* Holographic Grid Overlay */}
                                     <div className="absolute inset-0 bg-[linear-gradient(rgba(188,19,254,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(188,19,254,0.05)_1px,transparent_1px)] bg-[size:40px_40px] z-0 pointer-events-none opacity-50" />
@@ -183,26 +183,26 @@ const RecentProjectsNew = () => {
 
                                     {/* Project Content */}
                                     <div className="relative z-10 flex flex-col h-full">
-                                        <div className="flex justify-between items-start">
+                                        <div className="flex flex-col md:flex-row justify-between items-start">
                                             <div>
-                                                <div className="text-7xl mb-6 animate-bounce-slow filter drop-shadow-[0_0_25px_rgba(0,243,255,0.6)]">
+                                                <div className="text-5xl md:text-7xl mb-4 md:mb-6 animate-bounce-slow filter drop-shadow-[0_0_25px_rgba(0,243,255,0.6)]">
                                                     {projects.find(p => p.id === activeProject)?.image}
                                                 </div>
-                                                <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 uppercase tracking-tighter">
+                                                <h2 className="text-2xl md:text-5xl font-bold text-white mb-2 uppercase tracking-tighter">
                                                     {projects.find(p => p.id === activeProject)?.title}
                                                 </h2>
-                                                <div className="h-1 w-24 bg-neon-purple rounded-full shadow-[0_0_15px_#bc13fe] mt-2" />
+                                                <div className="h-1 w-16 md:w-24 bg-neon-purple rounded-full shadow-[0_0_15px_#bc13fe] mt-2" />
                                             </div>
 
                                             {/* Tech Stack Chips (Floating) */}
-                                            <div className="flex flex-col gap-2 items-end">
+                                            <div className="flex flex-row md:flex-col gap-2 items-start md:items-end mt-4 md:mt-0 flex-wrap">
                                                 {projects.find(p => p.id === activeProject)?.tech.map((t, i) => (
                                                     <motion.div
                                                         key={t}
                                                         initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
                                                         animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                                                         transition={{ delay: 0.3 + (i * 0.1), type: "spring" }}
-                                                        className="px-3 py-1 bg-black/60 border border-neon-cyan/30 text-neon-cyan text-xs font-mono rounded backdrop-blur-md shadow-[0_0_10px_rgba(0,243,255,0.1)]"
+                                                        className="px-2 md:px-3 py-1 bg-black/60 border border-neon-cyan/30 text-neon-cyan text-[10px] md:text-xs font-mono rounded backdrop-blur-md shadow-[0_0_10px_rgba(0,243,255,0.1)]"
                                                     >
                                                         {t}
                                                     </motion.div>
@@ -210,22 +210,22 @@ const RecentProjectsNew = () => {
                                             </div>
                                         </div>
 
-                                        <p className="mt-8 text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl border-l-4 border-neon-purple/50 pl-6 py-2 bg-gradient-to-r from-neon-purple/5 to-transparent rounded-r-lg">
+                                        <p className="mt-6 md:mt-8 text-sm md:text-xl text-gray-300 leading-relaxed max-w-2xl border-l-4 border-neon-purple/50 pl-4 md:pl-6 py-2 bg-gradient-to-r from-neon-purple/5 to-transparent rounded-r-lg">
                                             {projects.find(p => p.id === activeProject)?.description}
                                         </p>
 
                                         {/* Mission Stats */}
-                                        <div className="mt-auto grid grid-cols-3 gap-6 pt-10 border-t border-white/10">
+                                        <div className="mt-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 pt-6 md:pt-10 border-t border-white/10">
                                             {Object.entries(projects.find(p => p.id === activeProject)?.stats || {}).map(([key, value], i) => (
                                                 <motion.div
                                                     key={key}
                                                     initial={{ opacity: 0, y: 20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ delay: 0.5 + (i * 0.1) }}
-                                                    className="bg-black/40 p-4 rounded-lg border border-white/5 hover:border-neon-cyan/50 transition-all duration-300 group hover:shadow-[0_0_15px_rgba(0,243,255,0.2)]"
+                                                    className="bg-black/40 p-2 md:p-4 rounded-lg border border-white/5 hover:border-neon-cyan/50 transition-all duration-300 group hover:shadow-[0_0_15px_rgba(0,243,255,0.2)]"
                                                 >
-                                                    <div className="text-2xl md:text-3xl font-bold text-white group-hover:text-neon-cyan transition-colors">{value}</div>
-                                                    <div className="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest font-mono mt-1 group-hover:text-neon-cyan/70">{key}</div>
+                                                    <div className="text-lg md:text-3xl font-bold text-white group-hover:text-neon-cyan transition-colors">{value}</div>
+                                                    <div className="text-[9px] md:text-xs text-gray-500 uppercase tracking-widest font-mono mt-1 group-hover:text-neon-cyan/70">{key}</div>
                                                 </motion.div>
                                             ))}
                                         </div>

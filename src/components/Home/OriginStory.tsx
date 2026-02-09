@@ -67,7 +67,7 @@ const OriginStory = () => {
 
                 {/* RIGHT: Data Stream Content */}
                 <div className="w-full lg:w-7/12">
-                    <GlassCard className="p-8 md:p-12 relative overflow-hidden border-l-4 border-l-neon-purple bg-black/60">
+                    <GlassCard className="p-6 md:p-12 relative overflow-hidden border-l-4 border-l-neon-purple bg-black/60">
                         {/* Background Grid */}
                         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:30px_30px] opacity-20 pointer-events-none" />
 
@@ -124,7 +124,7 @@ const OriginStory = () => {
                             </div>
 
                             {/* Stat Modules */}
-                            <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-white/10 pt-8">
                                 {stats.map((stat, idx) => (
                                     <div key={idx} className="bg-white/5 p-4 rounded border border-white/5 hover:border-neon-cyan/30 transition-colors group">
                                         <div className={`text-[10px] text-${stat.color} font-mono mb-1 group-hover:animate-pulse uppercase tracking-wider`}>

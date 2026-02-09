@@ -49,18 +49,20 @@ const AcademicLog = ({ educations }: Props) => {
                         transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                     />
                 </div>
+                {/* Mobile Data Spine */}
+                <div className="absolute left-3 sm:left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-neon-cyan/20 to-transparent md:hidden" />
 
-                <div className="space-y-16 md:space-y-24 relative">
+                <div className="space-y-12 md:space-y-24 relative">
                     {educations.map((edu, idx) => (
                         <div key={idx} className={`flex flex-col md:flex-row gap-8 relative items-center ${idx % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
 
                             {/* Central Node Connection */}
-                            <div className="absolute left-8 md:left-1/2 w-4 h-4 -translate-x-1/2 md:-translate-x-1/2 z-20 flex items-center justify-center">
+                            <div className="absolute left-3 sm:left-8 md:left-1/2 w-4 h-4 -translate-x-1/2 md:-translate-x-1/2 z-20 flex items-center justify-center">
                                 <div className="w-3 h-3 bg-deep-bg rounded-full border-2 border-neon-cyan shadow-[0_0_10px_#00f3ff] relative z-20">
                                     <div className="absolute inset-0 bg-neon-cyan animate-ping opacity-75 rounded-full" />
                                 </div>
                                 {/* Horizontal Connector Line */}
-                                <div className={`absolute top-1/2 h-[2px] bg-neon-cyan/30 w-8 md:w-16 -z-10 ${idx % 2 !== 0 ? "right-1/2 origin-right" : "left-1/2 origin-left"}`} />
+                                <div className={`absolute top-1/2 h-[2px] bg-neon-cyan/30 w-4 sm:w-8 md:w-16 -z-10 ${idx % 2 !== 0 ? "right-1/2 origin-right" : "left-1/2 origin-left"}`} />
                             </div>
 
                             {/* Content Card Side */}
@@ -69,43 +71,43 @@ const AcademicLog = ({ educations }: Props) => {
                                 whileInView={{ opacity: 1, x: 0, scale: 1 }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                                 viewport={{ once: true, margin: "-100px" }}
-                                className="flex-1 w-full pl-16 md:pl-0"
+                                className="flex-1 w-full pl-10 sm:pl-16 md:pl-0"
                             >
                                 <GlassCard className="relative p-1 overflow-hidden group border-neon-cyan/20 bg-deep-bg/80">
                                     {/* Animated Border Gradient */}
                                     <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-cyan opacity-0 group-hover:opacity-20 transition-opacity duration-500 animate-[spin_4s_linear_infinite]" />
 
-                                    <div className="relative bg-[#0a0a0a] p-6 md:p-8 rounded-xl h-full flex flex-col justify-between z-10">
+                                    <div className="relative bg-[#0a0a0a] p-4 md:p-8 rounded-xl h-full flex flex-col justify-between z-10">
                                         {/* Header area */}
                                         <div className="border-b border-white/10 pb-4 mb-4 flex justify-between items-start">
-                                            <div>
-                                                <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-neon-cyan transition-colors">{edu.degree}</h3>
-                                                <p className="text-neon-purple font-mono text-sm mt-1">{edu.program}</p>
+                                            <div className="max-w-[80%]">
+                                                <h3 className="text-lg md:text-2xl font-bold text-white group-hover:text-neon-cyan transition-colors leading-tight">{edu.degree}</h3>
+                                                <p className="text-neon-purple font-mono text-xs md:text-sm mt-1 leading-tight">{edu.program}</p>
                                             </div>
-                                            <div className="text-4xl opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 filter grayscale group-hover:grayscale-0">
+                                            <div className="text-2xl md:text-4xl opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 filter grayscale group-hover:grayscale-0">
                                                 🎓
                                             </div>
                                         </div>
 
                                         {/* Details Grid */}
-                                        <div className="grid grid-cols-2 gap-4 mb-6">
+                                        <div className="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6">
                                             <div>
-                                                <span className="text-[10px] uppercase text-gray-500 font-mono tracking-widest block mb-1">Timeline</span>
-                                                <span className="text-sm text-gray-300 font-bold">{edu.date}</span>
+                                                <span className="text-[9px] md:text-[10px] uppercase text-gray-500 font-mono tracking-widest block mb-1">Timeline</span>
+                                                <span className="text-xs md:text-sm text-gray-300 font-bold">{edu.date}</span>
                                             </div>
                                             <div className="text-right">
-                                                <span className="text-[10px] uppercase text-gray-500 font-mono tracking-widest block mb-1">Sector</span>
-                                                <span className="text-sm text-gray-300 font-bold">{edu.location}</span>
+                                                <span className="text-[9px] md:text-[10px] uppercase text-gray-500 font-mono tracking-widest block mb-1">Sector</span>
+                                                <span className="text-xs md:text-sm text-gray-300 font-bold">{edu.location}</span>
                                             </div>
                                         </div>
 
                                         {/* Grade / Download Bar */}
                                         <div className="mt-auto">
                                             <div className="flex justify-between items-end mb-2">
-                                                <span className="text-[10px] text-neon-cyan font-mono">INSTALLATION_COMPLETE</span>
-                                                <span className="text-sm font-bold text-white">{edu.grade}</span>
+                                                <span className="text-[8px] md:text-[10px] text-neon-cyan font-mono">INSTALLATION_COMPLETE</span>
+                                                <span className="text-xs md:text-sm font-bold text-white">{edu.grade}</span>
                                             </div>
-                                            <div className="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
+                                            <div className="h-1 md:h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
                                                 <motion.div
                                                     initial={{ width: 0 }}
                                                     whileInView={{ width: "100%" }}
