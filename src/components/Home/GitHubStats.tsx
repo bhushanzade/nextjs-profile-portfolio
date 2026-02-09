@@ -36,7 +36,7 @@ const GitHubStats = () => {
                 </GlassCard>
 
                 {/* Streak Stats */}
-                <GlassCard className="col-span-1 min-h-[180px] flex items-center justify-center bg-black/40">
+                <GlassCard className="col-span-1 min-h-[180px] flex items-center justify-center bg-black/40 relative">
                     <div className="relative w-full h-full min-h-[150px]">
                         <Image
                             src="https://nirzak-streak-stats.vercel.app?user=bhushanzade&theme=dracula&hide_border=true&background=00000000&ring=bc13fe&currStreakLabel=00f3ff"
