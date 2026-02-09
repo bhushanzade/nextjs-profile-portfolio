@@ -201,7 +201,11 @@ const RecentProjectsNew = () => {
                                                         key={t}
                                                         initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
                                                         animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                                                        transition={{ delay: 0.3 + (i * 0.1), type: "spring" }}
+                                                        transition={{
+                                                            delay: 0.3 + (i * 0.1),
+                                                            type: "spring",
+                                                            filter: { type: "tween", ease: "linear" }
+                                                        }}
                                                         className="px-2 md:px-3 py-1 bg-black/60 border border-neon-cyan/30 text-neon-cyan text-[10px] md:text-xs font-mono rounded backdrop-blur-md shadow-[0_0_10px_rgba(0,243,255,0.1)]"
                                                     >
                                                         {t}
