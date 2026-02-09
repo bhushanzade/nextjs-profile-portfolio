@@ -14,8 +14,8 @@ const TerminalWindow = () => {
     const isTypingRef = useRef(true);
 
     const commands = [
-        { cmd: "whoami", output: "bhushan_zade" },
-        { cmd: "cat skills.json", output: '["React", "Next.js", "TypeScript", "Node.js"]' },
+        { cmd: "whoami", output: "Bhushan Zade" },
+        { cmd: "cat skills.json", output: '["Angular", "React", "Next.js", "TypeScript", "Node.js"]' },
         { cmd: "git status", output: "On branch master\nYour branch is up to date with 'origin/master'." },
         { cmd: "npm run deploy", output: "Deploying to production...\nSuccess! Welcome to the future." },
     ];

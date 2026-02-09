@@ -103,7 +103,7 @@ const HackerHero = () => {
                                     wrapper="span"
                                     speed={60}
                                     repeat={Infinity}
-                                    className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-purple drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                                    className="bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-purple drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
                                 />
                             </motion.div>
 
