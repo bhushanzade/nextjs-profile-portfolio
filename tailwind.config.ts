@@ -32,6 +32,7 @@ export default {
         slideUp: "slideUp 1s ease-out",
         "glow-pulse": "glow-pulse 2s infinite alternate",
         "neon-flicker": "neon-flicker 1.5s infinite alternate",
+        "scan-fast": "scan-fast 2s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -88,6 +89,12 @@ export default {
           '80%': { transform: 'skewX(1deg)' },
           '90%': { transform: 'skewX(0deg)' },
           '100%': { transform: 'skewX(0deg)' }
+        },
+        "scan-fast": {
+          "0%": { top: "0%", opacity: "0" },
+          "10%": { opacity: "1" },
+          "90%": { opacity: "1" },
+          "100%": { top: "100%", opacity: "0" },
         }
       }
     },
