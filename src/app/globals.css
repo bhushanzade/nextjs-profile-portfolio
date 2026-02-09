@@ -1,4 +1,14 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
+@source "../../src/**/*.{js,ts,jsx,tsx,mdx}";
+
+/* 
+  @tailwind directives are not needed with @import "tailwindcss" in v4,
+  but keeping the layer structure effectively. 
+*/
+@theme {
+  --font-sans: Arial, Helvetica, sans-serif;
+}
 
 :root {
   --background: #050505;
