@@ -37,7 +37,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
             <div className="absolute inset-0 z-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-500 hover:opacity-100" />
-            <div className="relative z-10">{children}</div>
+            <div className="relative z-10 w-full h-full">{children}</div>
         </motion.div>
     );
 };

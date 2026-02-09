@@ -1,9 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { GlassCard } from "@components/ui/GlassCard";
+
+const StatsImage = ({ src, alt, className, errorMessage = "System Offline" }: { src: string, alt: string, className?: string, errorMessage?: string }) => {
+    const [error, setError] = useState(false);
+
+    if (error) {
+        return (
+            <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center border border-red-500/30 bg-red-500/5 rounded-lg">
+                <div className="text-red-500 font-mono text-2xl mb-2">⚠</div>
+                <div className="text-red-400 font-mono text-xs uppercase tracking-widest">{errorMessage}</div>
+                <div className="text-red-500/50 font-mono text-[10px] mt-1">SIGNAL_LOST</div>
+            </div>
+        );
+    }
+
+    return (
+        <Image
+            src={src}
+            alt={alt}
+            fill
+            className={className}
+            unoptimized
+            onError={() => setError(true)}
+        />
+    );
+};
 
 const GitHubStats = () => {
     return (
@@ -23,54 +48,50 @@ const GitHubStats = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* GitHub Stats Card */}
-                <GlassCard className="col-span-1 md:col-span-2 lg:col-span-1 min-h-[180px] flex items-center justify-center bg-black/40">
+                <GlassCard className="col-span-1 md:col-span-2 lg:col-span-1 min-h-[180px] flex items-center justify-center bg-black/40 relative">
                     <div className="relative w-full h-full min-h-[150px]">
-                        <Image
+                        <StatsImage
                             src="https://github-readme-stats.vercel.app/api?username=bhushanzade&show_icons=true&theme=dracula&bg_color=00000000&hide_border=true&title_color=00f3ff&text_color=ededed&icon_color=bc13fe"
                             alt="GitHub Stats"
-                            fill
                             className="object-contain"
-                            unoptimized
+                            errorMessage="STATS_SERVER_OFFLINE"
                         />
                     </div>
                 </GlassCard>
 
                 {/* Streak Stats */}
-                <GlassCard className="col-span-1 min-h-[180px] flex items-center justify-center bg-black/40">
+                <GlassCard className="col-span-1 min-h-[180px] flex items-center justify-center bg-black/40 relative">
                     <div className="relative w-full h-full min-h-[150px]">
-                        <Image
+                        <StatsImage
                             src="https://nirzak-streak-stats.vercel.app?user=bhushanzade&theme=dracula&hide_border=true&background=00000000&ring=bc13fe&currStreakLabel=00f3ff"
                             alt="GitHub Streak"
-                            fill
                             className="object-contain"
-                            unoptimized
+                            errorMessage="STREAK_DATA_UNAVAILABLE"
                         />
                     </div>
                 </GlassCard>
 
                 {/* Top Langs */}
-                <GlassCard className="col-span-1 min-h-[180px] flex items-center justify-center bg-black/40">
+                <GlassCard className="col-span-1 min-h-[180px] flex items-center justify-center bg-black/40 relative">
                     <div className="relative w-full h-full min-h-[150px]">
-                        <Image
+                        <StatsImage
                             src="https://github-readme-stats.vercel.app/api/top-langs/?username=bhushanzade&theme=dracula&bg_color=00000000&hide_border=true&title_color=00f3ff&text_color=ededed"
                             alt="Top Languages"
-                            fill
                             className="object-contain"
-                            unoptimized
+                            errorMessage="LANG_ANALYSIS_FAILED"
                         />
                     </div>
                 </GlassCard>
 
                 {/* Activity Graph - Full Width */}
-                <GlassCard className="col-span-1 md:col-span-2 lg:col-span-3 min-h-[200px] flex items-center justify-center bg-black/40 overflow-hidden">
+                <GlassCard className="col-span-1 md:col-span-2 lg:col-span-3 min-h-[200px] flex items-center justify-center bg-black/40 overflow-hidden relative">
                     <div className="w-full overflow-x-auto">
                         <div className="relative w-full min-w-[600px] h-[180px]">
-                            <Image
+                            <StatsImage
                                 src="https://github-readme-activity-graph.vercel.app/graph?username=bhushanzade&theme=react-dark&bg_color=050505&color=bc13fe&line=00f3ff&point=ffffff&area=true&hide_border=true"
                                 alt="Activity Graph"
-                                fill
                                 className="object-contain"
-                                unoptimized
+                                errorMessage="ACTIVITY_LOG_CORRUPTED"
                             />
                         </div>
                     </div>
