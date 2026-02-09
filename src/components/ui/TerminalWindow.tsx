@@ -66,7 +66,7 @@ const TerminalWindow = () => {
             initial={{ opacity: 0, scale: 0.9, y: 50 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-lg mx-auto bg-black/80 backdrop-blur-md rounded-xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(0,243,255,0.15)] font-mono text-sm md:text-base text-left"
+            className="w-full max-w-lg mx-auto bg-black/80 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(0,243,255,0.15)] font-mono text-sm md:text-base text-left"
         >
             {/* Header */}
             <div className="bg-white/5 p-3 flex items-center justify-between border-b border-white/5">

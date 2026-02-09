@@ -7,7 +7,7 @@ import * as random from "maath/random/dist/maath-random.esm";
 
 function ParticleCloud(props: any) {
     const ref = useRef<any>(null);
-    const [sphere] = useState(() => random.inSphere(new Float32Array(5001), { radius: 1.5 }));
+    const [sphere] = useState(() => random.inSphere(new Float32Array(2001), { radius: 1.5 }));
 
     useFrame((state, delta) => {
         if (ref.current) {
@@ -34,7 +34,7 @@ function ParticleCloud(props: any) {
 const ParticleExplosion = () => {
     return (
         <div className="absolute inset-0 z-0 h-full w-full">
-            <Canvas camera={{ position: [0, 0, 1] }}>
+            <Canvas camera={{ position: [0, 0, 1] }} dpr={[1, 2]}>
                 <ParticleCloud />
             </Canvas>
         </div>

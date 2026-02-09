@@ -9,7 +9,7 @@ export default function HomePage() {
     <div className="relative min-h-screen overflow-hidden bg-deep-bg text-white selection:bg-neon-cyan selection:text-black">
       <AnimatedBackground />
 
-      <main className="relative z-10 flex flex-col gap-20 pb-20">
+      <main className="relative z-10 flex flex-col gap-32 pb-32 px-16">
         <HackerHero />
         <RecentWorkNew />
         <RecentProjectsNew />
