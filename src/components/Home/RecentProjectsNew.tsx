@@ -84,7 +84,7 @@ const RecentProjectsNew = () => {
     const [activeProject, setActiveProject] = useState(projects[0].id);
 
     return (
-        <section className="relative z-10 py-24 overflow-hidden">
+        <section id="projects" className="relative z-10 py-24 overflow-hidden">
             {/* Avengers/Shield Style Background Overlay */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,243,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,243,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
 

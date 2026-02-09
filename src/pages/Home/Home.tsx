@@ -20,7 +20,7 @@ export default function HomePage({ educations = [] }: Props) {
     <div className="relative min-h-screen overflow-hidden bg-deep-bg text-white selection:bg-neon-cyan selection:text-black">
       <AnimatedBackground />
 
-      <main className="relative z-10 flex flex-col gap-32 pb-32 px-4 md:px-0">
+      <main className="relative z-10 flex flex-col gap-32 pb-32 px-0 md:px-8">
         <HackerHero />
         <OriginStory />
         <TechArsenal />

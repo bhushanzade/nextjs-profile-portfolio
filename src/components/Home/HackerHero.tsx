@@ -113,8 +113,18 @@ const HackerHero = () => {
                                 transition={{ delay: 0.8, type: "spring" }}
                                 className="flex gap-6 justify-center lg:justify-start"
                             >
-                                <NeonButton variant="primary">Initiate Project</NeonButton>
-                                <NeonButton variant="secondary">Establish Comms</NeonButton>
+                                <NeonButton
+                                    variant="primary"
+                                    onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
+                                    Initiate Project
+                                </NeonButton>
+                                <NeonButton
+                                    variant="secondary"
+                                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
+                                    Establish Comms
+                                </NeonButton>
                             </motion.div>
                         </div>
 

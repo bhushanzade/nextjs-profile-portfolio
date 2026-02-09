@@ -81,7 +81,7 @@ const SocialLink = ({ name, icon, url, color }: { name: string, icon: string, ur
 
 const ConnectSection = () => {
     return (
-        <section className="relative z-10 container mx-auto px-4 py-24 mb-20 min-h-[600px] flex items-center">
+        <section id="contact" className="relative z-10 container mx-auto px-4 py-24 mb-20 min-h-[600px] flex items-center">
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full items-center relative">
 
