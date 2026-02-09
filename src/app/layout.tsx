@@ -25,12 +25,13 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bhushanz.netlify.app/"),
   title: title,
   description: description,
   openGraph: {
     title: title,
     description: description,
-    url: "https://www.bhushanzade.com", // URL of your website
+    url: "https://bhushanz.netlify.app/", // URL of your website
     images: [
       {
         url: "/images/myimg.png",
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
   publisher: "Bhushan Zade", // Name of the publisher of the website
   "authors": [{
     name: "Bhushan Zade",
-    "url": "https://www.bhushanzade.com",
+    "url": "https://bhushanz.netlify.app/",
   }],
 }
 
