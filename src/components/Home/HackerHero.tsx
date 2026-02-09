@@ -20,7 +20,7 @@ const HackerHero = () => {
             { text: "ACCESS GRANTED.", delay: 2400 },
         ];
 
-        let timeouts: NodeJS.Timeout[] = [];
+        const timeouts: NodeJS.Timeout[] = [];
 
         sequence.forEach(({ text, delay }, index) => {
             const timeout = setTimeout(() => {

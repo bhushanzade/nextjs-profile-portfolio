@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { GlassCard } from "@components/ui/GlassCard";
 import clsx from "clsx";
+import Image from "next/image";
 
 const categories = [
     {
@@ -139,11 +140,15 @@ const TechArsenal = () => {
                                         <div className="flex items-center gap-4 mb-4">
                                             {/* Icon Container with Glow */}
                                             <div className="w-12 h-12 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-neon-purple group-hover:shadow-[0_0_15px_rgba(188,19,254,0.3)] transition-all duration-300">
-                                                <img
-                                                    src={`https://skillicons.dev/icons?i=${skill.icon}`}
-                                                    alt={skill.name}
-                                                    className="w-8 h-8 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-300"
-                                                />
+                                                <div className="relative w-8 h-8">
+                                                    <Image
+                                                        src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                                                        alt={skill.name}
+                                                        fill
+                                                        className="object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-300"
+                                                        unoptimized
+                                                    />
+                                                </div>
                                             </div>
 
                                             <div className="flex-1">

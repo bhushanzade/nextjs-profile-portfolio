@@ -1,18 +1,18 @@
 "use client";
 
-import React, { useRef, useState, useMemo } from "react";
+import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Float, Stars } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 import { motion } from "framer-motion";
 import { GlassCard } from "@components/ui/GlassCard";
-import { NeonButton } from "@components/ui/NeonButton";
+
 import * as THREE from "three";
 
 // --- 3D Components ---
 
-function ParticleGlobe(props: any) {
-    const ref = useRef<any>(null);
+function ParticleGlobe(props: React.ComponentProps<typeof Points>) {
+    const ref = useRef<THREE.Points>(null);
     const [sphere] = useState(() => random.inSphere(new Float32Array(3000), { radius: 1.2 }));
 
     useFrame((state, delta) => {
@@ -38,7 +38,7 @@ function ParticleGlobe(props: any) {
     );
 }
 
-function OrbitingSatellite({ radius, speed, color, label, offset = 0 }: { radius: number, speed: number, color: string, label: string, offset?: number }) {
+function OrbitingSatellite({ radius, speed, color, offset = 0 }: { radius: number, speed: number, color: string, offset?: number }) {
     const ref = useRef<THREE.Group>(null);
 
     useFrame(({ clock }) => {
@@ -97,9 +97,9 @@ const ConnectSection = () => {
                         <ParticleGlobe />
 
                         {/* Satellites */}
-                        <OrbitingSatellite radius={1.6} speed={0.5} color="#00f3ff" label="GitHub" offset={0} />
-                        <OrbitingSatellite radius={2.0} speed={0.3} color="#bc13fe" label="LinkedIn" offset={2} />
-                        <OrbitingSatellite radius={1.8} speed={0.4} color="#00ff9d" label="Email" offset={4} />
+                        <OrbitingSatellite radius={1.6} speed={0.5} color="#00f3ff" offset={0} />
+                        <OrbitingSatellite radius={2.0} speed={0.3} color="#bc13fe" offset={2} />
+                        <OrbitingSatellite radius={1.8} speed={0.4} color="#00ff9d" offset={4} />
 
                         {/* Connection Lines (Visual) */}
                         <mesh rotation={[Math.PI / 2, 0, 0]}>

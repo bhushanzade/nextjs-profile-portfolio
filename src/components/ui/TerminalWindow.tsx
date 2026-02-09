@@ -4,6 +4,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 
+const commands = [
+    { cmd: "whoami", output: "Bhushan Zade" },
+    { cmd: "cat skills.json", output: '["Angular", "React", "Next.js", "TypeScript", "Node.js"]' },
+    { cmd: "git status", output: "On branch master\nYour branch is up to date with 'origin/master'." },
+    { cmd: "npm run deploy", output: "Deploying to production...\nSuccess! Welcome to the future." },
+];
+
 const TerminalWindow = () => {
     const [lines, setLines] = useState<string[]>([]);
     const [currentLine, setCurrentLine] = useState("");
@@ -11,14 +18,9 @@ const TerminalWindow = () => {
     // Use refs to maintain state across re-renders without triggering them
     const commandIndexRef = useRef(0);
     const charIndexRef = useRef(0);
-    const isTypingRef = useRef(true);
 
-    const commands = [
-        { cmd: "whoami", output: "Bhushan Zade" },
-        { cmd: "cat skills.json", output: '["Angular", "React", "Next.js", "TypeScript", "Node.js"]' },
-        { cmd: "git status", output: "On branch master\nYour branch is up to date with 'origin/master'." },
-        { cmd: "npm run deploy", output: "Deploying to production...\nSuccess! Welcome to the future." },
-    ];
+
+    const isTypingRef = useRef(true);
 
     useEffect(() => {
         let timeoutId: NodeJS.Timeout;

@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+// import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { GlassCard } from "@components/ui/GlassCard";
-import { NeonButton } from "@components/ui/NeonButton";
-import Link from "next/link";
+
 
 const experiences = [
     {
@@ -89,7 +90,7 @@ const RecentWorkNew = () => {
                                 {/* Icons positioned on the ring */}
                                 {["react", "angular", "nextjs", "ts", "nodejs", "docker", "gcp", "firebase"].map((icon, i) => {
                                     const angle = (i * 360) / 8;
-                                    const radius = 140; // Approx half of w-80 (320px) minus padding
+
                                     // Calculate position: x = r * cos(a), y = r * sin(a)
                                     // Tailwind logic: use absolute and transform.
                                     // Actually, simpler to just rotate a container
@@ -102,11 +103,15 @@ const RecentWorkNew = () => {
                                             }}
                                         >
                                             <div className="w-full h-full bg-black/80 rounded-full border border-neon-cyan/50 p-2 shadow-[0_0_10px_#00f3ff] flex items-center justify-center animate-pulse">
-                                                <img
-                                                    src={`https://skillicons.dev/icons?i=${icon}`}
-                                                    alt={icon}
-                                                    className="w-full h-full object-contain opacity-90"
-                                                />
+                                                <div className="relative w-full h-full">
+                                                    <Image
+                                                        src={`https://skillicons.dev/icons?i=${icon}`}
+                                                        alt={icon}
+                                                        fill
+                                                        className="object-contain opacity-90"
+                                                        unoptimized
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
                                     );
